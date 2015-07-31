@@ -2,7 +2,7 @@
 
 This code examines how scatter impacts Halo Abundance Matching techniques. Specifically, it is used to look at the low mass end of galaxy formation to better understand dwarf galaxies.
 
-How to run this code: `$ python predict.py`
+How to run this code: `$ python plot.py`
 
 Soft code requirements: `mcconnachie.dat`
 
