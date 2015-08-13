@@ -1,8 +1,6 @@
-'''
-
-Various Stellar-Halo-Mass (SHM) functions at redshift 0 from the literature
-
-'''
+""" Various Stellar-Halo-Mass (SHM) functions at redshift zero
+from the literature.
+"""
 #-----------------------------------------------------------------------------
 # Kenza Arraki, 2014
 #-----------------------------------------------------------------------------
@@ -11,7 +9,11 @@ from __future__ import division
 import numpy as np
 
 def moster(x):
-    """ Moster 2013 SHM function z=0 """
+    """Moster 2013 Stellar-Halo-Mass function redshift zero.
+
+    Keyword arguments:
+    x -- array of peak halo masses
+    """
     m1 = 10.**11.59
     n = 0.0351
     beta = 1.376
@@ -21,7 +23,9 @@ def moster(x):
     return tr
 
 def behroozi_f(bx, alpha, delta, gamma):
-    ''' intermediary function for Behroozi SHM '''
+    """Intermediary function for Behroozi SHM.
+    Should not be called by the user.
+    """
     tr = np.log10(1.+np.exp(bx))**gamma
     tr *= delta
     tr /= 1. + np.exp(10.**(-bx))
@@ -29,7 +33,11 @@ def behroozi_f(bx, alpha, delta, gamma):
     return tr
 
 def behroozi(x):
-    """ Behroozi 2013 SHM function z=0 """
+    """Behroozi 2013 Stellar-Halo-Mass function at redshift zero.
+
+    Keyword arguments:
+    x -- array of peak halo masses
+    """
     epsilon = 10.**-1.777
     m1 = 10.**11.514
     alpha = -1.412
@@ -42,11 +50,21 @@ def behroozi(x):
     return tr
 
 def garrisonkimmel(x):
-    """ Garrison-Kimmel 2014 SHM function z=0 """
-    tr = 3.e6 * (x/1.e10)**1.92
+    """Garrison-Kimmel 2014 Stellar-Halo-Mass function at redshift zero.
+    MNRAS 438, 2578–2596 (2014)
+    Equation 4
+
+    Keyword arguments:
+    x -- array of peak halo masses
+    """
+    tr = 3.0e6 * (x/1.0e10)**1.92
     return tr
 
 def brook(x):
-    """ Brook 2014 SHM function z=0 """
+    """Brook 2014 Stellar-Halo-Mass function at redshift zero.
+
+    Keyword arguments:
+    x -- array of peak halo masses
+    """
     tr = (x/(63.1e6))**3.1
     return tr

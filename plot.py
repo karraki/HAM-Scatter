@@ -1,6 +1,9 @@
-# Kenza Arraki (karraki@gmail.com)
-# Written September 2014
-# Predict Stellar Mass Function including scatter in SHM relation
+"""Predict Stellar Mass Function including scatter in the 
+Stellar-Halo-Mass relation. Plot results in file 'HaloMassFunctions.pdf'.
+"""
+#-----------------------------------------------------------------------------
+# Kenza Arraki (https://github.com/karraki), September 2014
+#-----------------------------------------------------------------------------
 
 import os.path
 import numpy as np
